@@ -18,7 +18,7 @@ const Jokes: React.FC = () => {
   }
 
   if (status === 'failed') {
-    return <div className="text-center text-red-500">Error: {error}</div>;  //ll
+    return <div className="text-center text-red-500">Error: {error}</div>; 
   }
 
   return (

@@ -22,6 +22,7 @@ const Jokes: React.FC = () => {
   }
 
   return (
+    <>
     <div className="flex flex-wrap justify-center gap-6 p-4">
       {jokes.map((joke) => (
         <div
@@ -40,6 +41,7 @@ const Jokes: React.FC = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

@@ -13,6 +13,11 @@ const QuotePage: React.FC = () => {
     dispatch(fetchQuote());
   }, [dispatch]);
 
+  // Function to fetch the quote again
+  const handleFetchQuote = () => {
+    dispatch(fetchQuote());
+  };
+
   if (status === 'loading') {
     return <div className="text-center text-lg">Loading...</div>;
   }
@@ -32,6 +37,13 @@ const QuotePage: React.FC = () => {
         <p className="text-md text-gray-600 mb-4">- {quote.author}</p>
         <p className="text-sm text-gray-500">Tags: {quote.tags.join(', ')}</p>
         <p className="text-xs text-gray-400 mt-2">Added on: {quote.dateAdded}</p>
+        {/* Button to fetch a new quote */}
+        <button
+          onClick={handleFetchQuote}
+          className="bg-gray-400 m-2 p-2 rounded-sm hover:bg-white hover:text-black"
+        >
+          Fetch New Quote
+        </button>
       </div>
     </div>
   );
